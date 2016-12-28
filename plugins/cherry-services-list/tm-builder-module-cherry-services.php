@@ -14,6 +14,7 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 			'subtitle',
 			'show_filters',
 			'columns',
+			'columns_laptop',
 			'columns_tablet',
 			'columns_phone',
 			'posts_per_page',
@@ -40,6 +41,7 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 
 		$this->fields_defaults = array(
 			'columns'        => array( '4' ),
+			'columns_laptop' => array( '4' ),
 			'columns_tablet' => array( '2' ),
 			'columns_phone'  => array( '1' ),
 			'posts_per_page' => array( '4' ),
@@ -73,6 +75,19 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 				'type'            => 'select',
 				'option_category' => 'basic_option',
 				'default'         => 4,
+				'options'         => array(
+					1 => 1,
+					2 => 2,
+					3 => 3,
+					4 => 4,
+					6 => 6,
+				),
+			),
+			'columns_laptop' => array(
+				'label'           => esc_html__( 'Columns Laptop', 'tm-builder-integrator' ),
+				'type'            => 'select',
+				'option_category' => 'basic_option',
+				'default'         => 2,
 				'options'         => array(
 					1 => 1,
 					2 => 2,
@@ -283,11 +298,7 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 			'disabled_on' => array(
 				'label'           => esc_html__( 'Disable on', 'tm-builder-integrator' ),
 				'type'            => 'multiple_checkboxes',
-				'options'         => array(
-					'phone'   => esc_html__( 'Phone', 'tm-builder-integrator' ),
-					'tablet'  => esc_html__( 'Tablet', 'tm-builder-integrator' ),
-					'desktop' => esc_html__( 'Desktop', 'tm-builder-integrator' ),
-				),
+				'options'         => tm_pb_media_breakpoints(),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
 				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm-builder-integrator' ),
@@ -325,6 +336,7 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 				'show_filters',
 				'columns',
 				'columns_tablet',
+				'columns_laptop',
 				'columns_phone',
 				'posts_per_page',
 				'category',
@@ -377,6 +389,7 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 				'subtitle'       => $this->_var( 'subtitle' ),
 				'show_filters'   => $this->_var( 'show_filters' ),
 				'columns'        => $this->_var( 'columns' ),
+				'columns_laptop' => $this->_var( 'columns_laptop' ),
 				'columns_tablet' => $this->_var( 'columns_tablet' ),
 				'columns_phone'  => $this->_var( 'columns_phone' ),
 				'posts_per_page' => $this->_var( 'posts_per_page' ),
