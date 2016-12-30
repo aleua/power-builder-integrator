@@ -22,6 +22,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 			'tags',
 			'ingredients',
 			'link_item',
+			'buy',
 			'desc_length',
 			'module_id',
 			'module_class',
@@ -161,6 +162,16 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 					'off' => esc_html__( 'No', 'tm_builder' ),
 				),
 			),
+			'buy' => array(
+				'label'           => esc_html__( 'Show buy button', 'tm-builder-integrator' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'on'  => esc_html__( 'Yes', 'tm_builder' ),
+					'off' => esc_html__( 'No', 'tm_builder' ),
+				),
+				'description'     => esc_html__( 'If enable eCommerce option.', 'tm_builder' ),
+			),
 			'desc_length' => array(
 				'label'           => esc_html__( 'Description length', 'tm-builder-integrator' ),
 				'type'            => 'text',
@@ -206,6 +217,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				'tags',
 				'ingredients',
 				'link_item',
+				'buy',
 				'desc_length',
 			)
 		);
@@ -233,6 +245,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				'tags'            => ( 'on' === $this->_var( 'tags' ) ) ? 1 : 0,
 				'ingredients'     => ( 'on' === $this->_var( 'ingredients' ) ) ? 1 : 0,
 				'link_item'       => ( 'on' === $this->_var( 'link_item' ) ) ? 1 : 0,
+				'buy'             => ( 'on' === $this->_var( 'buy' ) ) ? 1 : 0,
 				'desc_length'     => $this->_var( 'desc_length' ),
 			)
 		);
