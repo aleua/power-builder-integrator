@@ -376,7 +376,12 @@ class Tm_Builder_Cherry_Services extends Tm_Builder_Module {
 			$cats = array();
 			foreach ( $cats_array as $category ) {
 				$category_term = get_term_by( 'id', $category, cherry_services_list()->tax( 'category' ) );
-				$cats[]        = $category_term->slug;
+
+				if ( ! $category_term ) {
+					continue;
+				}
+
+				$cats[] = $category_term->slug;
 			}
 			$cats = implode( ',', $cats );
 		}

@@ -307,6 +307,11 @@ class Tm_Builder_Cherry_Projects extends Tm_Builder_Module {
 		if ( ! empty( $id_str ) ) {
 			foreach ( $id_array as $id ) {
 				$term = get_term_by( 'id', $id, $term_type );
+
+				if ( ! $term ) {
+					continue;
+				}
+
 				$terms_array[] = $term->slug;
 			}
 		}
