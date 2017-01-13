@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Power Builder Integrator
- * Plugin URI:
+ * Plugin URI:  https://github.com/templatemonster/power-builder-integrator
  * Description: Helps to integrate 3rd party plugins into Power Builder
- * Version:     1.0.10
+ * Version:     1.0.11
  * Author:      Template Monster
  * Author URI:  http://www.templatemonster.com/
  * Text Domain: tm-builder-integrator
@@ -73,6 +73,22 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 		private $plugin_dir = '';
 
 		/**
+		 * Holder for plugin version.
+		 *
+		 * @since 1.0.11
+		 * @var   string
+		 */
+		private $plugin_version = '1.0.11';
+
+		/**
+		 * Holder for plugin slug.
+		 *
+		 * @since 1.0.11
+		 * @var   string
+		 */
+		private $plugin_slug = 'power-builder-integrator';
+
+		/**
 		 * Holder for loader instance.
 		 *
 		 * @var string
@@ -87,6 +103,8 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 		function __construct() {
 			add_action( 'wp_loaded', array( $this, 'config' ) );
 			add_action( 'tm_builder_load_user_modules', array( $this, 'load_plugins' ) );
+
+			$this->updater();
 		}
 
 		/**
@@ -388,6 +406,23 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 				sprintf( '%s/%s', $slug, $file ),
 				apply_filters( 'active_plugins', get_option( 'active_plugins' ) )
 			);
+		}
+
+		/**
+		 * Include and init updater.
+		 *
+		 * @since 1.0.11
+		 */
+		public function updater() {
+			require_once $this->plugin_dir( 'inc/class-cherry-update/class-cherry-plugin-update.php' );
+
+			$updater = new Cherry_Plugin_Update();
+			$updater->init( array(
+				'version'         => $this->plugin_version,
+				'slug'            => $this->plugin_slug,
+				'repository_name' => $this->plugin_slug,
+				'product_name'    => 'templatemonster',
+			) );
 		}
 
 		/**
