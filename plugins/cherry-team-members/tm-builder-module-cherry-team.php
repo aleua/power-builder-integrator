@@ -74,16 +74,55 @@ class Tm_Builder_Cherry_Team extends Tm_Builder_Module {
 		$fields = array(
 			'columns' => array(
 				'label'           => esc_html__( 'Columns', 'tm-builder-integrator' ),
-				'type'            => 'range',
+				'type'            => 'select',
 				'option_category' => 'basic_option',
-				'default'         => '4',
-				'range_settings' => array(
-					'min'  => 1,
-					'max'  => 6,
-					'step' => 1,
+				'default'         => 4,
+				'options'         => array(
+					1 => 1,
+					2 => 2,
+					3 => 3,
+					4 => 4,
+					6 => 6,
 				),
-				'mobile_options'      => true,
-				'mobile_global'       => true,
+			),
+			'columns_laptop' => array(
+				'label'           => esc_html__( 'Columns Laptop', 'tm-builder-integrator' ),
+				'type'            => 'select',
+				'option_category' => 'basic_option',
+				'default'         => 2,
+				'options'         => array(
+					1 => 1,
+					2 => 2,
+					3 => 3,
+					4 => 4,
+					6 => 6,
+				),
+			),
+			'columns_tablet' => array(
+				'label'           => esc_html__( 'Columns Tablet', 'tm-builder-integrator' ),
+				'type'            => 'select',
+				'option_category' => 'basic_option',
+				'default'         => 2,
+				'options'         => array(
+					1 => 1,
+					2 => 2,
+					3 => 3,
+					4 => 4,
+					6 => 6,
+				),
+			),
+			'columns_phone' => array(
+				'label'           => esc_html__( 'Columns Phone', 'tm-builder-integrator' ),
+				'type'            => 'select',
+				'option_category' => 'basic_option',
+				'default'         => 1,
+				'options'         => array(
+					1 => 1,
+					2 => 2,
+					3 => 3,
+					4 => 4,
+					6 => 6,
+				),
 			),
 			'group' => array(
 				'label'					=> esc_html__( 'Include groups', 'tm-builder-integrator' ),
@@ -275,15 +314,6 @@ class Tm_Builder_Cherry_Team extends Tm_Builder_Module {
 					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
 					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
 				),
-			),
-			'columns_laptop' => array(
-				'type' => 'skip',
-			),
-			'columns_tablet' => array(
-				'type' => 'skip',
-			),
-			'columns_phone' => array(
-				'type' => 'skip',
 			),
 			'disabled_on' => array(
 				'label'           => esc_html__( 'Disable on', 'tm-builder-integrator' ),
