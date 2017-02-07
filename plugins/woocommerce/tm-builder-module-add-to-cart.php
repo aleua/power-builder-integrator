@@ -2,7 +2,7 @@
 class Tm_Builder_Add_To_Cart extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Product Add To Cart', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Product Add To Cart', 'power-builder-integrator' );
 		$this->icon = 'f07a';
 		$this->slug = 'tm_pb_add_to_cart';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -21,13 +21,13 @@ class Tm_Builder_Add_To_Cart extends Tm_Builder_Module {
 
 		$fields = array(
 			'id' => array(
-				'label'           => esc_html__( 'Product ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Product ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'default'         => '',
 			),
 			'quantity' => array(
-				'label'           => esc_html__( 'Quantity', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Quantity', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '1',
@@ -38,33 +38,33 @@ class Tm_Builder_Add_To_Cart extends Tm_Builder_Module {
 				),
 			),
 			'sku' => array(
-				'label'           => esc_html__( 'Product SKU', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Product SKU', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'default'         => '',
 			),
 			'show_price' => array(
-				'label'           => esc_html__( 'Show Price?', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Price?', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
 				'type'        => 'text',
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

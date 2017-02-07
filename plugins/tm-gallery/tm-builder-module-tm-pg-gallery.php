@@ -3,7 +3,7 @@ class Tm_Builder_Tm_Pg_Gallery extends Tm_Builder_Module {
 
 	function init() {
 
-		$this->name = esc_html__( 'TM Gallery', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'TM Gallery', 'power-builder-integrator' );
 		$this->icon = 'f03e';
 		$this->slug = 'tm_pb_tm_pg_gallery';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -19,37 +19,37 @@ class Tm_Builder_Tm_Pg_Gallery extends Tm_Builder_Module {
 
 		$fields = array(
 			'id' => array(
-				'label'           => esc_html__( 'Include categories', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Include categories', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'renderer'        => array( $this, 'get_galleries' ),
-				'description'     => esc_html__( 'Choose which categories you would like to include.', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Choose which categories you would like to include.', 'power-builder-integrator' ),
 			),
 			'disabled_on' => array(
-				'label'           => esc_html__( 'Disable on', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Disable on', 'power-builder-integrator' ),
 				'type'            => 'multiple_checkboxes',
 				'options'         => array(
-					'phone'   => esc_html__( 'Phone', 'tm-builder-integrator' ),
-					'tablet'  => esc_html__( 'Tablet', 'tm-builder-integrator' ),
-					'desktop' => esc_html__( 'Desktop', 'tm-builder-integrator' ),
+					'phone'   => esc_html__( 'Phone', 'power-builder-integrator' ),
+					'tablet'  => esc_html__( 'Tablet', 'power-builder-integrator' ),
+					'desktop' => esc_html__( 'Desktop', 'power-builder-integrator' ),
 				),
 				'additional_att'  => 'disable_on',
 				'option_category' => 'configuration',
-				'description'     => esc_html__( 'This will disable the module on selected devices', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'This will disable the module on selected devices', 'power-builder-integrator' ),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
 				'type'        => 'text',
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm-builder-integrator' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder-integrator' ),
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

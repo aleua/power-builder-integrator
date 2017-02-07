@@ -2,7 +2,7 @@
 class Tm_Builder_Cherry_RE_Property_List extends Tm_Builder_Module {
 
 	function init() {
-		$this->name             = esc_html__( 'Cherry RE Property List', 'tm-builder-integrator' );
+		$this->name             = esc_html__( 'Cherry RE Property List', 'power-builder-integrator' );
 		$this->icon             = 'f00b';
 		$this->slug             = 'tm_pb_cherry_re_property_list';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -45,7 +45,7 @@ class Tm_Builder_Cherry_RE_Property_List extends Tm_Builder_Module {
 			'show_price'       => array( 'on' ),
 			'show_location'    => array( 'on' ),
 			'show_more_button' => array( 'on' ),
-			'more_button_text' => array( esc_html__( 'read more', 'tm-builder-integrator' ) ),
+			'more_button_text' => array( esc_html__( 'read more', 'power-builder-integrator' ) ),
 			'template'         => array( 'default.tmpl' ),
 		);
 	}
@@ -55,7 +55,7 @@ class Tm_Builder_Cherry_RE_Property_List extends Tm_Builder_Module {
 
 		$fields = array(
 			'number' => array(
-				'label'           => esc_html__( 'How Many?', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'How Many?', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'range',
 				'range_settings'  => array(
@@ -66,130 +66,130 @@ class Tm_Builder_Cherry_RE_Property_List extends Tm_Builder_Module {
 				'default' => '5',
 			),
 			'orderby' => array(
-				'label'           => esc_html__( 'Order by', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Order by', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'date'       => esc_html__( 'Date', 'tm-builder-integrator' ),
-					'id'         => esc_html__( 'Property ID', 'tm-builder-integrator' ),
-					'author'     => esc_html__( 'Property author', 'tm-builder-integrator' ),
-					'title'      => esc_html__( 'Property title', 'tm-builder-integrator' ),
-					'name'       => esc_html__( 'Property slug', 'tm-builder-integrator' ),
-					'modified'   => esc_html__( 'Last modified date', 'tm-builder-integrator' ),
-					'parent'     => esc_html__( 'Property parent', 'tm-builder-integrator' ),
-					'rand'       => esc_html__( 'Random', 'tm-builder-integrator' ),
-					'menu_order' => esc_html__( 'Menu order', 'tm-builder-integrator' ),
+					'date'       => esc_html__( 'Date', 'power-builder-integrator' ),
+					'id'         => esc_html__( 'Property ID', 'power-builder-integrator' ),
+					'author'     => esc_html__( 'Property author', 'power-builder-integrator' ),
+					'title'      => esc_html__( 'Property title', 'power-builder-integrator' ),
+					'name'       => esc_html__( 'Property slug', 'power-builder-integrator' ),
+					'modified'   => esc_html__( 'Last modified date', 'power-builder-integrator' ),
+					'parent'     => esc_html__( 'Property parent', 'power-builder-integrator' ),
+					'rand'       => esc_html__( 'Random', 'power-builder-integrator' ),
+					'menu_order' => esc_html__( 'Menu order', 'power-builder-integrator' ),
 				),
 				'default' => 'date',
 			),
 			'order' => array(
-				'label'           => esc_html__( 'Order', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Order', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'desc' => esc_html__( 'Descending', 'tm-builder-integrator' ),
-					'asc'  => esc_html__( 'Ascending', 'tm-builder-integrator' ),
+					'desc' => esc_html__( 'Descending', 'power-builder-integrator' ),
+					'asc'  => esc_html__( 'Ascending', 'power-builder-integrator' ),
 				),
 				'default' => 'desc',
 			),
 			'show_title' => array(
-				'label'           => esc_html__( 'Show Title', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Title', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_image' => array(
-				'label'           => esc_html__( 'Show Image', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Image', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_image_size',
 				),
 			),
 			'image_size' => array(
-				'label'           => esc_html__( 'Photo Size', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Select photo size.', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Photo Size', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Select photo size.', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'options'         => array_combine( $image_sizes, $image_sizes ),
 				'default'         => 'thumbnail',
 				'depends_show_if' => 'on',
 			),
 			'show_status' => array(
-				'label'           => esc_html__( 'Show Status', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Status', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_area' => array(
-				'label'           => esc_html__( 'Show Area', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Area', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_bedrooms' => array(
-				'label'           => esc_html__( 'Show Bedrooms', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Bedrooms', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_bathrooms' => array(
-				'label'           => esc_html__( 'Show Bathrooms', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Bathrooms', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_price' => array(
-				'label'           => esc_html__( 'Show Price', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Price', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_location' => array(
-				'label'           => esc_html__( 'Show Location', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Location', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_excerpt' => array(
-				'label'           => esc_html__( 'Show Excerpt', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Excerpt', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_excerpt_length',
 				),
 			),
 			'excerpt_length' => array(
-				'label'           => esc_html__( 'Excerpt Length', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Auto-generated excerpt length (in words)', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Excerpt Length', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Auto-generated excerpt length (in words)', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'range_settings'  => array(
 					'min'  => 0,
@@ -200,44 +200,44 @@ class Tm_Builder_Cherry_RE_Property_List extends Tm_Builder_Module {
 				'depends_show_if' => 'on',
 			),
 			'show_more_button' => array(
-				'label'           => esc_html__( 'Show More Button', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show More Button', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_more_button_text',
 				),
 			),
 			'more_button_text' => array(
-				'label'           => esc_html__( 'More Button Text', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'More Button Text', 'power-builder-integrator' ),
 				'type'            => 'text',
-				'default'         => esc_html__( 'read more', 'tm-builder-integrator' ),
+				'default'         => esc_html__( 'read more', 'power-builder-integrator' ),
 				'depends_show_if' => 'on',
 			),
 			'template' => array(
-				'label'           => esc_html__( 'Template', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Choose template file (*.tmpl)', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Template', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Choose template file (*.tmpl)', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => $this->_prepare_template_select(),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder-integrator' ),
 				'type'        => 'text',
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

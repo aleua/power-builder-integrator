@@ -2,7 +2,7 @@
 class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Restaurant Menu Items', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Restaurant Menu Items', 'power-builder-integrator' );
 		$this->icon = 'f0f4';
 		$this->slug = 'tm_pb_menu_items';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -33,13 +33,13 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 
 		$fields = array(
 			'view' => array(
-				'label'           => esc_html__( 'View mode', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'View mode', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'select',
 				'options'         => array(
-					'grid'        => esc_html__( 'Grid', 'tm-builder-integrator' ),
-					'list'        => esc_html__( 'List', 'tm-builder-integrator' ),
-					'simple-list' => esc_html__( 'Simple List', 'tm-builder-integrator' ),
+					'grid'        => esc_html__( 'Grid', 'power-builder-integrator' ),
+					'list'        => esc_html__( 'List', 'power-builder-integrator' ),
+					'simple-list' => esc_html__( 'Simple List', 'power-builder-integrator' ),
 				),
 				'affects'         => array(
 					'#tm_pb_price_pos',
@@ -47,59 +47,59 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'categ' => array(
-				'label'           => esc_html__( 'Categories', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Categories', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'default'         => '',
-				'description'     => esc_html__( 'Comma separated categories IDs list', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Comma separated categories IDs list', 'power-builder-integrator' ),
 			),
 			'tags_list' => array(
-				'label'           => esc_html__( 'Tags', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Tags', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Comma separated tags IDs list', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Comma separated tags IDs list', 'power-builder-integrator' ),
 			),
 			'item_ids' => array(
-				'label'           => esc_html__( 'Menu item IDs', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Menu item IDs', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
-				'description'     => esc_html__( 'Comma separated menu items IDs list', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Comma separated menu items IDs list', 'power-builder-integrator' ),
 			),
 			'col' => array(
-				'label'           => esc_html__( 'Columns', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Columns', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'select',
 				'options'         => array(
-					'1' => __( '1 column', 'tm-builder-integrator' ),
-					'2' => __( '2 columns', 'tm-builder-integrator' ),
-					'3' => __( '3 columns', 'tm-builder-integrator' ),
-					'4' => __( '4 columns', 'tm-builder-integrator' ),
-					'6' => __( '6 columns', 'tm-builder-integrator' ),
+					'1' => __( '1 column', 'power-builder-integrator' ),
+					'2' => __( '2 columns', 'power-builder-integrator' ),
+					'3' => __( '3 columns', 'power-builder-integrator' ),
+					'4' => __( '4 columns', 'power-builder-integrator' ),
+					'6' => __( '6 columns', 'power-builder-integrator' ),
 				),
 			),
 			'categ_name' => array(
-				'label'           => esc_html__( 'Show category name', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show category name', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'only_text' => __('Only text', 'tm-builder-integrator'),
-					'with_img'  => __('Title with image', 'tm-builder-integrator'),
-					'none'      => __('Don`t show', 'tm-builder-integrator'),
+					'only_text' => __('Only text', 'power-builder-integrator'),
+					'with_img'  => __('Title with image', 'power-builder-integrator'),
+					'none'      => __('Don`t show', 'power-builder-integrator'),
 				),
 			),
 			'price_pos' => array(
-				'label'           => esc_html__( 'Price position', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Price position', 'power-builder-integrator' ),
 				'option_category' => 'configuration',
 				'type'            => 'select',
 				'options'         => array(
-					'points'      => esc_html__( 'Dotted line and price on the right', 'tm-builder-integrator' ),
-					'right'       => esc_html__( 'Price on the right', 'tm-builder-integrator' ),
-					'after_title' => esc_html__( 'Price next to the title', 'tm-builder-integrator' ),
+					'points'      => esc_html__( 'Dotted line and price on the right', 'power-builder-integrator' ),
+					'right'       => esc_html__( 'Price on the right', 'power-builder-integrator' ),
+					'after_title' => esc_html__( 'Price next to the title', 'power-builder-integrator' ),
 				),
 				'depends_show_if' => 'simple-list',
 			),
 			'show_attributes' => array(
-				'label'           => esc_html__( 'Show attributes', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show attributes', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -108,7 +108,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'feat_img' => array(
-				'label'               => esc_html__( 'Show featured image', 'tm-builder-integrator' ),
+				'label'               => esc_html__( 'Show featured image', 'power-builder-integrator' ),
 				'type'                => 'yes_no_button',
 				'option_category'     => 'configuration',
 				'options'             => array(
@@ -118,7 +118,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				'depends_show_if_not' => 'simple-list',
 			),
 			'excerpt' => array(
-				'label'           => esc_html__( 'Show excerpt', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show excerpt', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -127,7 +127,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'price' => array(
-				'label'           => esc_html__( 'Show price', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show price', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -136,7 +136,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'tags' => array(
-				'label'           => esc_html__( 'Show tags', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show tags', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -145,7 +145,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'ingredients' => array(
-				'label'           => esc_html__( 'Show ingredients', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show ingredients', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -154,7 +154,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'link_item' => array(
-				'label'           => esc_html__( 'Link item', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Link item', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -163,7 +163,7 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				),
 			),
 			'buy' => array(
-				'label'           => esc_html__( 'Show buy button', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show buy button', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
@@ -173,23 +173,23 @@ class Tm_Builder_Mprm_Items extends Tm_Builder_Module {
 				'description'     => esc_html__( 'If enable eCommerce option.', 'tm_builder' ),
 			),
 			'desc_length' => array(
-				'label'           => esc_html__( 'Description length', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Description length', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
 				'type'        => 'text',
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

@@ -2,7 +2,7 @@
 class Tm_Builder_Booked_Login extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Booked Login', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Booked Login', 'power-builder-integrator' );
 		$this->icon = 'f274';
 		$this->slug = 'tm_pb_booked_login';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -17,18 +17,18 @@ class Tm_Builder_Booked_Login extends Tm_Builder_Module {
 
 		$fields = array(
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
 				'type'        => 'text',
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
