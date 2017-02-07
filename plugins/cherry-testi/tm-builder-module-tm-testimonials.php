@@ -2,7 +2,7 @@
 class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Cherry Testimonials', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Cherry Testimonials', 'power-builder-integrator' );
 		$this->icon = 'f10d';
 		$this->slug = 'tm_pb_cherry_testi';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -75,12 +75,12 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'source' => array(
-				'label'           => esc_html__( 'Choose Source', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Choose Source', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'category' => esc_html__( 'Categories', 'tm-builder-integrator' ),
-					'ids'      => esc_html__( 'Testimonial ids', 'tm-builder-integrator' ),
+					'category' => esc_html__( 'Categories', 'power-builder-integrator' ),
+					'ids'      => esc_html__( 'Testimonial ids', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_category',
@@ -88,8 +88,8 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				),
 			),
 			'category' => array(
-				'label'            => esc_html__( 'Include categories', 'tm-builder-integrator' ),
-				'description'      => esc_html__( 'Choose which categories you would like to include.', 'tm-builder-integrator' ),
+				'label'            => esc_html__( 'Include categories', 'power-builder-integrator' ),
+				'description'      => esc_html__( 'Choose which categories you would like to include.', 'power-builder-integrator' ),
 				'option_category'  => 'basic_option',
 				'renderer'         => 'tm_builder_include_categories_option',
 				'renderer_options' => array(
@@ -100,14 +100,14 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'depends_show_if' => 'category',
 			),
 			'ids' => array(
-				'label'           => esc_html__( 'Include post id', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Enter post id you would like to include. The separator gap. Example: 256 472 23 6', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Include post id', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Enter post id you would like to include. The separator gap. Example: 256 472 23 6', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
 				'depends_show_if' => 'ids',
 			),
 			'limit' => array(
-				'label'           => esc_html__( 'Posts count ( Set -1 to show all )', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Posts count ( Set -1 to show all )', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'range',
 				'range_settings'  => array(
@@ -118,70 +118,70 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'default' => '3',
 			),
 			'order' => array(
-				'label'           => esc_html__( 'Order', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Testimonials order.', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Order', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Testimonials order.', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'desc' => esc_html__( 'Descending', 'tm-builder-integrator' ),
-					'asc'  => esc_html__( 'Ascending', 'tm-builder-integrator' ),
+					'desc' => esc_html__( 'Descending', 'power-builder-integrator' ),
+					'asc'  => esc_html__( 'Ascending', 'power-builder-integrator' ),
 				),
 			),
 			'orderby' => array(
-				'label'           => esc_html__( 'Order by', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Order testimonials by.', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Order by', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Order testimonials by.', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'date'     => esc_html__( 'Date', 'tm-builder-integrator' ),
-					'none'     => esc_html__( 'None', 'tm-builder-integrator' ),
-					'id'       => esc_html__( 'ID', 'tm-builder-integrator' ),
-					'title'    => esc_html__( 'Author', 'tm-builder-integrator' ),
-					'name'     => esc_html__( 'Slug', 'tm-builder-integrator' ),
-					'modified' => esc_html__( 'Last modified date', 'tm-builder-integrator' ),
-					'rand'     => esc_html__( 'Random', 'tm-builder-integrator' ),
+					'date'     => esc_html__( 'Date', 'power-builder-integrator' ),
+					'none'     => esc_html__( 'None', 'power-builder-integrator' ),
+					'id'       => esc_html__( 'ID', 'power-builder-integrator' ),
+					'title'    => esc_html__( 'Author', 'power-builder-integrator' ),
+					'name'     => esc_html__( 'Slug', 'power-builder-integrator' ),
+					'modified' => esc_html__( 'Last modified date', 'power-builder-integrator' ),
+					'rand'     => esc_html__( 'Random', 'power-builder-integrator' ),
 				),
 			),
 			'sup_title' => array(
-				'label'           => esc_html__( 'Super Title', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Super Title', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'title' => array(
-				'label'           => esc_html__( 'Title', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Title', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'sub_title' => array(
-				'label'           => esc_html__( 'Sub Title', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Sub Title', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 			),
 			'divider' => array(
-				'label'           => esc_html__( 'Show Divider', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Toggle a separator between title & testimonials.', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Divider', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Toggle a separator between title & testimonials.', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
 				),
 			),
 			'show_avatar' => array(
-				'label'           => esc_html__( 'Show Avatar', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Avatar', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_size',
 				),
 			),
 			'size' => array(
-				'label'          => esc_html__( 'Avatar Size', 'tm-builder-integrator' ),
-				'description'    => esc_html__( 'Select avatar size.', 'tm-builder-integrator' ),
+				'label'          => esc_html__( 'Avatar Size', 'power-builder-integrator' ),
+				'description'    => esc_html__( 'Select avatar size.', 'power-builder-integrator' ),
 				'type'           => 'range',
 				'range_settings' => array(
 					'min'  => 1,
@@ -192,35 +192,35 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'depends_show_if' => 'on',
 			),
 			'show_email' => array(
-				'label'           => esc_html__( 'Show E-mail', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show E-mail', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_position' => array(
-				'label'   => esc_html__( 'Show Position', 'tm-builder-integrator' ),
+				'label'   => esc_html__( 'Show Position', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'show_company' => array(
-				'label'   => esc_html__( 'Show Company Name', 'tm-builder-integrator' ),
+				'label'   => esc_html__( 'Show Company Name', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'content_length' => array(
-				'label'           => esc_html__( 'Content Length', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Insert the number of words you want to show in the post content.', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Content Length', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Insert the number of words you want to show in the post content.', 'power-builder-integrator' ),
 				'option_category' => 'configuration',
 				'type'            => 'range',
 				'range_settings'  => array(
@@ -231,12 +231,12 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'default' => '55',
 			),
 			'type' => array(
-				'label'           => esc_html__( 'Type', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Type', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'list'   => esc_html__( 'List', 'tm-builder-integrator' ),
-					'slider' => esc_html__( 'Slider', 'tm-builder-integrator' ),
+					'list'   => esc_html__( 'List', 'power-builder-integrator' ),
+					'slider' => esc_html__( 'Slider', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_autoplay',
@@ -249,7 +249,7 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				),
 			),
 			'autoplay' => array(
-				'label'           => esc_html__( 'Autoplay, ms ( Set 0 to stop autoplay )', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Autoplay, ms ( Set 0 to stop autoplay )', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'depends_show_if' => 'slider',
@@ -261,48 +261,48 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'default' => '7000',
 			),
 			'effect' => array(
-				'label'           => esc_html__( 'Effect', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Effect', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'slider',
 				'options'         => array(
-					'slide'     => esc_html__( 'Slide', 'tm-builder-integrator' ),
-					'coverflow' => esc_html__( 'Coverflow', 'tm-builder-integrator' ),
+					'slide'     => esc_html__( 'Slide', 'power-builder-integrator' ),
+					'coverflow' => esc_html__( 'Coverflow', 'power-builder-integrator' ),
 				),
 			),
 			'loop' => array(
-				'label'           => esc_html__( 'Enable loop mode', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Enable loop mode', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'slider',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'pagination' => array(
-				'label'           => esc_html__( 'Display pagination', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Display pagination', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'slider',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'navigation' => array(
-				'label'           => esc_html__( 'Display navigation', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Display navigation', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'depends_show_if' => 'slider',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'slides_per_view' => array(
-				'label'           => esc_html__( 'Number of slides per view', 'tm-builder-integrator' ),
-				'description'     => esc_html__( "Slides visible at the same time on slider's container", 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Number of slides per view', 'power-builder-integrator' ),
+				'description'     => esc_html__( "Slides visible at the same time on slider's container", 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'depends_show_if' => 'slider',
 				'type'            => 'range',
@@ -316,7 +316,7 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'mobile_global'  => true,
 			),
 			'space_between' => array(
-				'label'           => esc_html__( 'Distance between slides (px)', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Distance between slides (px)', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'depends_show_if' => 'slider',
 				'type'            => 'range',
@@ -330,26 +330,26 @@ class Tm_Builder_Cherry_Testi extends Tm_Builder_Module {
 				'mobile_global'  => true,
 			),
 			'template' => array(
-				'label'           => esc_html__( 'Layout', 'tm-builder-integrator' ),
-				'description'     => esc_html__( 'Choose template file (*.tmpl)', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Layout', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Choose template file (*.tmpl)', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => $this->_prepare_template_select(),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
-				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
+				'description' => esc_html__( 'This will change the label of the module in the builder for easy identification.', 'power-builder-integrator' ),
 				'type'        => 'text',
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

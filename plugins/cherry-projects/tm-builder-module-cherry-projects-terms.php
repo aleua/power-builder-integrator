@@ -2,7 +2,7 @@
 class Tm_Builder_Cherry_Projects_Terms extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Projects Terms', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Projects Terms', 'power-builder-integrator' );
 		$this->icon = 'f288';
 		$this->slug = 'tm_pb_cherry_projects_terms';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -39,43 +39,43 @@ class Tm_Builder_Cherry_Projects_Terms extends Tm_Builder_Module {
 
 		$fields = array(
 			'term_type' => array(
-				'label'           => esc_html__( 'Term type', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Term type', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'category' => esc_html__( 'Category', 'tm-builder-integrator' ),
-					'tag'      => esc_html__( 'Tag', 'tm-builder-integrator' ),
+					'category' => esc_html__( 'Category', 'power-builder-integrator' ),
+					'tag'      => esc_html__( 'Tag', 'power-builder-integrator' ),
 				),
-				'description'     => esc_html__( 'Choose term type', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Choose term type', 'power-builder-integrator' ),
 			),
 			'listing_layout' => array(
-				'label'           => esc_html__( 'Projects listing layout', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Projects listing layout', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'grid-layout'           => esc_html__( 'Grid', 'tm-builder-integrator' ),
-					'masonry-layout'        => esc_html__( 'Masonry', 'tm-builder-integrator' ),
-					'cascading-grid-layout' => esc_html__( 'Cascading grid', 'tm-builder-integrator' ),
-					'list-layout'           => esc_html__( 'List', 'tm-builder-integrator' ),
+					'grid-layout'           => esc_html__( 'Grid', 'power-builder-integrator' ),
+					'masonry-layout'        => esc_html__( 'Masonry', 'power-builder-integrator' ),
+					'cascading-grid-layout' => esc_html__( 'Cascading grid', 'power-builder-integrator' ),
+					'list-layout'           => esc_html__( 'List', 'power-builder-integrator' ),
 				),
-				'description'     => esc_html__( 'Choose terms listing view layout.', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Choose terms listing view layout.', 'power-builder-integrator' ),
 			),
 			'load_animation' => array(
-				'label'           => esc_html__( 'Loading animation', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Loading animation', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'loading-animation-fade'             => esc_html__( 'Fade animation', 'tm-builder-integrator' ),
-					'loading-animation-scale'            => esc_html__( 'Scale animation', 'tm-builder-integrator' ),
-					'loading-animation-move-up'          => esc_html__( 'Move Up animation', 'tm-builder-integrator' ),
-					'loading-animation-flip'             => esc_html__( 'Flip animation', 'tm-builder-integrator' ),
-					'loading-animation-helix'            => esc_html__( 'Helix animation', 'tm-builder-integrator' ),
-					'loading-animation-fall-perspective' => esc_html__( 'Fall perspective animation', 'tm-builder-integrator' ),
+					'loading-animation-fade'             => esc_html__( 'Fade animation', 'power-builder-integrator' ),
+					'loading-animation-scale'            => esc_html__( 'Scale animation', 'power-builder-integrator' ),
+					'loading-animation-move-up'          => esc_html__( 'Move Up animation', 'power-builder-integrator' ),
+					'loading-animation-flip'             => esc_html__( 'Flip animation', 'power-builder-integrator' ),
+					'loading-animation-helix'            => esc_html__( 'Helix animation', 'power-builder-integrator' ),
+					'loading-animation-fall-perspective' => esc_html__( 'Fall perspective animation', 'power-builder-integrator' ),
 				),
-				'description'     => esc_html__( 'Choose terms loading animation.', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Choose terms loading animation.', 'power-builder-integrator' ),
 			),
 			'column_number' => array(
-				'label'           => esc_html__( 'Columns', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Columns', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '3',
@@ -88,7 +88,7 @@ class Tm_Builder_Cherry_Projects_Terms extends Tm_Builder_Module {
 				'mobile_global'       => false,
 			),
 			'post_per_page' => array(
-				'label'           => esc_html__( 'Posts per page', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Posts per page', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '6',
@@ -101,7 +101,7 @@ class Tm_Builder_Cherry_Projects_Terms extends Tm_Builder_Module {
 				'mobile_global'       => false,
 			),
 			'item_margin' => array(
-				'label'           => esc_html__( 'Item margin', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Item margin', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => '10',
@@ -112,31 +112,31 @@ class Tm_Builder_Cherry_Projects_Terms extends Tm_Builder_Module {
 				),
 				'mobile_options'      => false,
 				'mobile_global'       => false,
-				'description'     => esc_html__( 'Select projects item margin (outer indent) value.', 'tm-builder-integrator' ),
+				'description'     => esc_html__( 'Select projects item margin (outer indent) value.', 'power-builder-integrator' ),
 			),
 			'grid_template' => array(
-				'label'           => esc_html__( 'Grid template', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Grid template', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
 				'default'         => 'terms-grid-default.tmpl',
 				'value'           => 'terms-grid-default.tmpl',
 			),
 			'masonry_template' => array(
-				'label'           => esc_html__( 'Masonry template', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Masonry template', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
 				'default'         => 'terms-masonry-default.tmpl',
 				'value'           => 'terms-masonry-default.tmpl',
 			),
 			'cascading_grid_template' => array(
-				'label'           => esc_html__( 'Cascading grid template', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Cascading grid template', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
 				'default'         => 'terms-cascading-grid-default.tmpl',
 				'value'           => 'terms-cascading-grid-default.tmpl',
 			),
 			'list_template' => array(
-				'label'           => esc_html__( 'List template', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'List template', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
 				'default'         => 'terms-list-default.tmpl',

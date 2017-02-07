@@ -2,7 +2,7 @@
 class Tm_Builder_Booked_Calendar extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Booked Calendar', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Booked Calendar', 'power-builder-integrator' );
 		$this->icon = 'f274';
 		$this->slug = 'tm_pb_booked_calendar';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -21,54 +21,54 @@ class Tm_Builder_Booked_Calendar extends Tm_Builder_Module {
 
 		$fields = array(
 			'calendar' => array(
-				'label'           => esc_html__( 'Calendar ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Calendar ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'default'         => '',
 			),
 			'year' => array(
-				'label'           => esc_html__( 'Year', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Year', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'default'         => '',
 			),
 			'month' => array(
-				'label'           => esc_html__( 'Month', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Month', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'basic_option',
 				'default'         => '',
 			),
 			'switcher' => array(
-				'label'           => esc_html__( 'Show calendar switcher?', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show calendar switcher?', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 			),
 			'size' => array(
-				'label'           => esc_html__( 'Calendar size', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Calendar size', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					'large' => esc_html__( 'Large', 'tm-builder-integrator' ),
-					'small' => esc_html__( 'Small', 'tm-builder-integrator' ),
+					'large' => esc_html__( 'Large', 'power-builder-integrator' ),
+					'small' => esc_html__( 'Small', 'power-builder-integrator' ),
 				),
 			),
 			'admin_label' => array(
-				'label'       => esc_html__( 'Admin Label', 'tm-builder-integrator' ),
+				'label'       => esc_html__( 'Admin Label', 'power-builder-integrator' ),
 				'type'        => 'text',
 			),
 			'module_id' => array(
-				'label'           => esc_html__( 'CSS ID', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS ID', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',
 				'option_class'    => 'tm_pb_custom_css_regular',
 			),
 			'module_class' => array(
-				'label'           => esc_html__( 'CSS Class', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'CSS Class', 'power-builder-integrator' ),
 				'type'            => 'text',
 				'option_category' => 'configuration',
 				'tab_slug'        => 'custom_css',

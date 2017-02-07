@@ -2,7 +2,7 @@
 class Tm_Builder_Tm_Timeline extends Tm_Builder_Module {
 
 	function init() {
-		$this->name = esc_html__( 'Timeline', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'Timeline', 'power-builder-integrator' );
 		$this->icon = 'f017';
 		$this->slug = 'tm_pb_tm_timeline';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -17,11 +17,11 @@ class Tm_Builder_Tm_Timeline extends Tm_Builder_Module {
 		);
 		$this->fields_defaults = array(
 			'timeline_layout' => array( 0 ),
-			'visible_items' => array( 1 ),
-			'date_format' => array( 'Y/m/d' ),
-			'tag' => array( '' ),
-			'order' => array( 'ASC' ),
-			'anchors' => array( 'on' ),
+			'visible_items'   => array( 1 ),
+			'date_format'     => array( 'Y/m/d' ),
+			'tag'             => array( '' ),
+			'order'           => array( 'ASC' ),
+			'anchors'         => array( 'on' ),
 		);
 	}
 
@@ -31,8 +31,8 @@ class Tm_Builder_Tm_Timeline extends Tm_Builder_Module {
 			'input_name'   => 'tm_pb_tag',
 		);
 
-		$args = wp_parse_args( $args, $defaults );
-		$name = $args['input_name'];
+		$args  = wp_parse_args( $args, $defaults );
+		$name  = $args['input_name'];
 		$terms = get_terms( $args['term_name'] );
 
 		if ( empty( $terms ) ) {
@@ -43,9 +43,9 @@ class Tm_Builder_Tm_Timeline extends Tm_Builder_Module {
 				$terms_array[ $term->name ] = $term->name;
 			}
 			$output = $this->render_field( array(
-				'name' => $name,
-				'type' => 'select',
-				'options' => $terms_array
+				'name'    => $name,
+				'type'    => 'select',
+				'options' => $terms_array,
 			) );
 		}
 
@@ -57,76 +57,76 @@ class Tm_Builder_Tm_Timeline extends Tm_Builder_Module {
 	function get_fields() {
 		$fields = array(
 			'timeline_layout' => array(
-				'label'           => esc_html__( 'Timeline Layout', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Timeline Layout', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'basic_option',
 				'options'         => array(
-					"horizontal" => "Horizontal",
-					"vertical" => "Vertical",
-					"vertical-chessorder" => "Vertical (chess order)",
+					"horizontal"          => esc_html__( 'Horizontal', 'power-builder-integrator' ),
+					"vertical"            => esc_html__( 'Vertical', 'power-builder-integrator' ),
+					"vertical-chessorder" => esc_html__( 'Vertical (chess order)', 'power-builder-integrator' ),
 				),
-				'description'     => esc_html__( 'Timeline look and feel.', 'tm-builder-integrator' ),
+				'description' => esc_html__( 'Timeline look and feel.', 'power-builder-integrator' ),
 			),
 			'visible_items' => array(
-				'label'           => esc_html__( 'Horizontal layout visible items limit', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Horizontal layout visible items limit', 'power-builder-integrator' ),
 				'type'            => 'range',
 				'option_category' => 'basic_option',
 				'default'         => 1,
-				'range_settings' => array(
+				'range_settings'  => array(
 					'min'  => 1,
 					'max'  => 6,
 					'step' => 1,
 				),
-				'mobile_options'      => false,
-				'mobile_global'       => false,
-				'description'     => esc_html__( 'Visible items limit is used for "Horizontal" layout.', 'tm-builder-integrator' ),
+				'mobile_options' => false,
+				'mobile_global'  => false,
+				'description'    => esc_html__( 'Visible items limit is used for "Horizontal" layout.', 'power-builder-integrator' ),
 			),
 			'date_format' => array(
-				'label'           => esc_html__( 'Date format', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Date format', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
-				'options'         => array (
-					'Y-m-d' => 'YYYY - MM - DD',
+				'options'         => array(
+					'Y-m-d'          => 'YYYY - MM - DD',
 					'YYYY / MM / DD' => 'Y/m/d',
 					'YYYY . MM . DD' => 'Y.m.d',
 					'DD - MM - YYYY' => 'd-m-Y',
 					'DD / MM / YYYY' => 'd/m/Y',
 					'DD . MM . YYYY' => 'd.m.Y',
-					'MM' => 'm',
-					'YYYY' => 'Y',
+					'MM'             => 'm',
+					'YYYY'           => 'Y',
 				),
-				'description'     => esc_html__( 'Date format used for displaying posts in the timeline.', 'tm-builder-integrator' ),
+				'description' => esc_html__( 'Date format used for displaying posts in the timeline.', 'power-builder-integrator' ),
 			),
 			'tag' => array(
-				'label'            => esc_html__( 'Tag', 'tm-builder-integrator' ),
+				'label'            => esc_html__( 'Tag', 'power-builder-integrator' ),
 				'type'             => 'select',
 				'option_category'  => 'configuration',
 				'renderer'         => array( $this, 'render_tag_selector' ),
 				'renderer_options' => array(
-					'use_terms'    => true,
-					'term_name'    => 'timeline_post_tag',
-					'input_name'   => 'tag',
+					'use_terms'  => true,
+					'term_name'  => 'timeline_post_tag',
+					'input_name' => 'tag',
 				),
-				'description'      => esc_html__( 'Show only posts which contain following tag. If none selected, will show all timeline posts.', 'tm-builder-integrator' ),
+				'description' => esc_html__( 'Show only posts which contain following tag. If none selected, will show all timeline posts.', 'power-builder-integrator' ),
 			),
 			'order' => array(
-				'label'           => esc_html__( 'Sort Order', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Sort Order', 'power-builder-integrator' ),
 				'type'            => 'select',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'ASC' => esc_html__( 'Ascending', 'tm-builder-integrator' ),
-					'DESC' => esc_html__( 'Descending', 'tm-builder-integrator' ),
+					'ASC'  => esc_html__( 'Ascending', 'power-builder-integrator' ),
+					'DESC' => esc_html__( 'Descending', 'power-builder-integrator' ),
 				),
 			),
 			'anchors' => array(
-				'label'             => esc_html__( 'Display anchors', 'tm-builder-integrator' ),
-				'type'              => 'yes_no_button',
-				'option_category'   => 'configuration',
-				'options'           => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Display anchors', 'power-builder-integrator' ),
+				'type'            => 'yes_no_button',
+				'option_category' => 'configuration',
+				'options'         => array(
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
-				'description'       => esc_html__( 'Timeline post title will be clickable and will lead user to the post', 'tm-builder-integrator' ),
+				'description' => esc_html__( 'Timeline post title will be clickable and will lead user to the post', 'power-builder-integrator' ),
 			)
 		);
 		return $fields;
@@ -174,12 +174,12 @@ class Tm_Builder_Tm_Timeline extends Tm_Builder_Module {
 		$content = call_user_func(
 			$callback,
 			array(
-				'layout' => $layout,
+				'layout'        => $layout,
 				'visible-items' => $this->_var( 'visible_items' ),
-				'date-format' => $dateFormat,
-				'tag' => $this->_var( 'tag' ),
-				'order' => $this->_var( 'order' ),
-				'anchors' => 'on' === $this->_var( 'anchors' ) ? 'true' : 'false',
+				'date-format'   => $dateFormat,
+				'tag'           => $this->_var( 'tag' ),
+				'order'         => $this->_var( 'order' ),
+				'anchors'       => 'on' === $this->_var( 'anchors' ) ? 'true' : 'false',
 			)
 		);
 

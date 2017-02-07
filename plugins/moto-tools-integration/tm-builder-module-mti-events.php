@@ -3,7 +3,7 @@ class Tm_Builder_Events_Team_Integrator extends Tm_Builder_Module {
 
 	function init() {
 
-		$this->name = esc_html__( 'MP Events', 'tm-builder-integrator' );
+		$this->name = esc_html__( 'MP Events', 'power-builder-integrator' );
 		$this->icon = 'f017';
 		$this->slug = 'tm_pb_mti_events';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
@@ -65,12 +65,12 @@ class Tm_Builder_Events_Team_Integrator extends Tm_Builder_Module {
 				),
 			),
 			'show_title' => array(
-				'label'           => esc_html__( 'Show Title', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Title', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_size',
@@ -89,24 +89,24 @@ class Tm_Builder_Events_Team_Integrator extends Tm_Builder_Module {
 				'default' => '25',
 			),
 			'show_participants' => array(
-				'label'           => esc_html__( 'Show Participants', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Participants', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_size',
 				),
 			),
 			'show_schedule' => array(
-				'label'           => esc_html__( 'Show Schedule', 'tm-builder-integrator' ),
+				'label'           => esc_html__( 'Show Schedule', 'power-builder-integrator' ),
 				'type'            => 'yes_no_button',
 				'option_category' => 'configuration',
 				'options'         => array(
-					'on'  => esc_html__( 'Yes', 'tm-builder-integrator' ),
-					'off' => esc_html__( 'No', 'tm-builder-integrator' ),
+					'on'  => esc_html__( 'Yes', 'power-builder-integrator' ),
+					'off' => esc_html__( 'No', 'power-builder-integrator' ),
 				),
 				'affects' => array(
 					'#tm_pb_size',

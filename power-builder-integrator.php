@@ -6,7 +6,7 @@
  * Version:     1.0.12
  * Author:      Template Monster
  * Author URI:  http://www.templatemonster.com/
- * Text Domain: tm-builder-integrator
+ * Text Domain: power-builder-integrator
  * License:     GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path: /languages
@@ -101,10 +101,20 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 		 * @since 1.0.0
 		 */
 		function __construct() {
+			add_action( 'plugins_loaded', array( $this, 'i18n' ) );
 			add_action( 'wp_loaded', array( $this, 'config' ) );
 			add_action( 'tm_builder_load_user_modules', array( $this, 'load_plugins' ) );
 
 			$this->updater();
+		}
+
+		/**
+		 * Loads the translation files.
+		 *
+		 * @since 1.0.13
+		 */
+		public function i18n() {
+			load_plugin_textdomain( 'power-builder-integrator', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 		}
 
 		/**
