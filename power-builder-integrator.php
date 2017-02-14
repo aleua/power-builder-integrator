@@ -3,7 +3,7 @@
  * Plugin Name: Power Builder Integrator
  * Plugin URI:  https://github.com/templatemonster/power-builder-integrator
  * Description: Helps to integrate 3rd party plugins into Power Builder
- * Version:     1.0.12
+ * Version:     1.0.13
  * Author:      Template Monster
  * Author URI:  http://www.templatemonster.com/
  * Text Domain: power-builder-integrator
@@ -118,6 +118,7 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 				'tm-gallery'             => 'tm-gallery.php',
 				'cherry-real-estate'     => 'cherry-real-estate.php',
 				'moto-tools-integration' => 'moto-tools-integration.php',
+				'contact-form-7'         => 'wp-contact-form-7.php',
 			);
 
 			$this->shortcodes = array(
@@ -175,6 +176,9 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 				),
 				'moto-tools-integration' => array(
 					'mti_events'     => array( 'cb' => $this->get_cb( 'mti_events' ) ),
+				),
+				'contact-form-7' => array(
+					'contact-form-7'       => array( 'cb' => $this->get_cb( 'contact-form-7' ) ),
 				),
 			);
 
@@ -335,7 +339,7 @@ if ( ! class_exists( 'Power_Buider_Integrator' ) ) {
 		}
 
 		/**
-		 * Get claa back name for current plugin and shortcode.
+		 * Get class back name for current plugin and shortcode.
 		 *
 		 * @since  1.0.0
 		 * @param  string $plugin    Plugin slug.
