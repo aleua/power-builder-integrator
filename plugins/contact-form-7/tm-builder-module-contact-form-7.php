@@ -3,7 +3,7 @@ class Tm_Builder_Contact_Form_7 extends Tm_Builder_Module {
 
 	function init() {
 		$this->name = esc_html__( 'Contact Form 7', 'power-builder-integrator' );
-		$this->icon = 'f288';
+		$this->icon = 'f0e0';
 		$this->slug = 'tm_pb_contact_form_7';
 		$this->main_css_element = '%%order_class%%.' . $this->slug;
 
