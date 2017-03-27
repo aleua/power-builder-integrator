@@ -139,7 +139,7 @@ class Tm_Builder_Cherry_Team extends Tm_Builder_Module {
 				'label'           => esc_html__( 'Include post id', 'power-builder-integrator' ),
 				'option_category' => 'basic_option',
 				'type'            => 'text',
-				'description'     => esc_html__( 'Enter post id you would like to include. The separator gap. Example: 256 472 23 6', 'power-builder-integrator' ),
+				'description'     => esc_html__( 'Enter comma separeted post IDs you would like to include. Example: 256, 472, 23, 6', 'power-builder-integrator' ),
 			),
 			'posts_per_page' => array(
 				'label'               => esc_html__( 'Posts count ( Set 0 to show all ) ', 'power-builder-integrator' ),

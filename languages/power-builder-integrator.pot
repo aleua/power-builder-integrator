@@ -1,19 +1,18 @@
 # Copyright (C) 2013 TODO
 # This file is distributed under the same license as the TODO package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Power Builder Integrator\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/plugins/plugin-name\n"
-"POT-Creation-Date: 2017-02-07 14:02+0200\n"
-"PO-Revision-Date: 2014-08-20 15:31+0200\n"
+"POT-Creation-Date: 2017-03-27 11:54+0200\n"
+"PO-Revision-Date: 2017-03-27 11:54+0200\n"
 "Last-Translator: FULL NAME <email@example.com>\n"
 "Language-Team: Cherry Team <translations@example.com >\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
 "esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: .\n"
@@ -931,8 +930,8 @@ msgstr ""
 
 #: ../plugins/cherry-services-list/tm-builder-module-cherry-services.php:140
 msgid ""
-"Enter post id you would like to include. The separator gap. "
-"Example: 256, 472, 23, 6"
+"Enter comma separated post IDs you would like to include. Example: 256, 472, "
+"23, 6"
 msgstr ""
 
 #: ../plugins/cherry-services-list/tm-builder-module-cherry-services.php:143
@@ -1076,10 +1075,9 @@ msgid "Choose which groups you would like to include."
 msgstr ""
 
 #: ../plugins/cherry-team-members/tm-builder-module-cherry-team.php:142
-#: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:104
 msgid ""
-"Enter post id you would like to include. The separator gap. "
-"Example: 256 472 23 6"
+"Enter comma separeted post IDs you would like to include. Example: 256, 472, "
+"23, 6"
 msgstr ""
 
 #: ../plugins/cherry-team-members/tm-builder-module-cherry-team.php:171
@@ -1133,6 +1131,12 @@ msgstr ""
 
 #: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:83
 msgid "Testimonial ids"
+msgstr ""
+
+#: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:104
+msgid ""
+"Enter post id you would like to include. The separator gap. Example: 256 472 "
+"23 6"
 msgstr ""
 
 #: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:110
@@ -1200,8 +1204,7 @@ msgid "Content Length"
 msgstr ""
 
 #: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:223
-msgid ""
-"Insert the number of words you want to show in the post content."
+msgid "Insert the number of words you want to show in the post content."
 msgstr ""
 
 #: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:234
@@ -1250,6 +1253,18 @@ msgstr ""
 
 #: ../plugins/cherry-testi/tm-builder-module-tm-testimonials.php:319
 msgid "Distance between slides (px)"
+msgstr ""
+
+#: ../plugins/contact-form-7/tm-builder-module-contact-form-7.php:5
+msgid "Contact Form 7"
+msgstr ""
+
+#: ../plugins/contact-form-7/tm-builder-module-contact-form-7.php:23
+msgid "Contact form 7 instance"
+msgstr ""
+
+#: ../plugins/contact-form-7/tm-builder-module-contact-form-7.php:27
+msgid "Choose contact form, which has already been created"
 msgstr ""
 
 #: ../plugins/moto-tools-integration/tm-builder-module-mti-events.php:6
@@ -1475,8 +1490,8 @@ msgstr ""
 
 #: ../plugins/tm-timeline/tm-builder-module-tm-timeline.php:110
 msgid ""
-"Show only posts which contain following tag. If none selected, will "
-"show all timeline posts."
+"Show only posts which contain following tag. If none selected, will show all "
+"timeline posts."
 msgstr ""
 
 #: ../plugins/tm-timeline/tm-builder-module-tm-timeline.php:113
@@ -1488,8 +1503,7 @@ msgid "Display anchors"
 msgstr ""
 
 #: ../plugins/tm-timeline/tm-builder-module-tm-timeline.php:129
-msgid ""
-"Timeline post title will be clickable and will lead user to the post"
+msgid "Timeline post title will be clickable and will lead user to the post"
 msgstr ""
 
 #: ../plugins/woocommerce/tm-builder-module-add-to-cart-url.php:5
