@@ -3,7 +3,7 @@
  * Plugin Name: Power Builder Integrator
  * Plugin URI:  https://github.com/templatemonster/power-builder-integrator
  * Description: Helps to integrate 3rd party plugins into Power Builder
- * Version:     1.0.13
+ * Version:     1.0.14
  * Author:      Template Monster
  * Author URI:  http://www.templatemonster.com/
  * Text Domain: power-builder-integrator
